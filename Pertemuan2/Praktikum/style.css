@@ -1,0 +1,17 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: lightblue;
+    table-layout: unset;
+}
+
+h2:hover{
+    color: lightcoral;
+    transition: 0.3s ease;
+}
+
+th{
+    background-color: lightblue;
+}
