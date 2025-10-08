@@ -49,7 +49,6 @@
     font-weight: bold;
 }
 
-/* MAIN CONTENT STYLES */
 .admin-main {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -60,7 +59,6 @@
     width: 100%;
 }
 
-/* SIDEBAR STYLES */
 .admin-sidebar {
     background-color: white;
     padding: 1.5rem;
@@ -119,7 +117,6 @@
     text-align: center;
 }
 
-/* CONTENT STYLES */
 .admin-content {
     background-color: white;
     padding: 1.5rem;
@@ -242,7 +239,6 @@
     color: var(--gray);
 }
 
-/* FOOTER STYLES */
 .admin-footer {
     background-color: var(--dark);
     color: white;
@@ -251,7 +247,6 @@
     margin-top: 2rem;
 }
 
-/* RESPONSIVE DESIGN ADMIN */
 @media (max-width: 992px) {
     .admin-main {
         grid-template-columns: 1fr;

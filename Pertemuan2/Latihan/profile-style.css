@@ -23,7 +23,6 @@
     opacity: 0.9;
 }
 
-/* NAVIGATION STYLES */
 .nav-container {
     background-color: white;
     padding: 1rem;
@@ -64,7 +63,6 @@
     color: white;
 }
 
-/* MAIN CONTENT STYLES */
 .main-content {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -76,7 +74,6 @@
     height: 100%;
 }
 
-/* SIDEBAR STYLES */
 .sidebar {
     background-color: white;
     padding: 1.5rem;
@@ -156,7 +153,6 @@
     color: var(--gray);
 }
 
-/* CONTENT STYLES */
 .content {
     background-color: white;
     padding: 1.5rem;
@@ -191,7 +187,6 @@
     padding-right: 5px;
 }
 
-/* Custom Scrollbar */
 .posts-container::-webkit-scrollbar {
     width: 6px;
 }
@@ -295,7 +290,6 @@
     color: var(--primary);
 }
 
-/* ADS STYLES */
 .ads {
     background-color: white;
     padding: 1.5rem;
@@ -360,7 +354,6 @@
     transform: scale(1.05);
 }
 
-/* FOOTER STYLES */
 .footer {
     background-color: var(--dark);
     color: white;
@@ -400,7 +393,6 @@
     transform: translateY(-3px);
 }
 
-/* RESPONSIVE DESIGN PROFILE */
 @media (max-width: 992px) {
     .main-content {
         grid-template-columns: 1fr 2fr;

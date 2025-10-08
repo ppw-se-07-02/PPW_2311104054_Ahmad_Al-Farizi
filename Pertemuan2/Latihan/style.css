@@ -45,7 +45,6 @@ body {
     background-color: var(--secondary);
 }
 
-/* Responsive Design */
 @media (max-width: 576px) {
     .btn {
         width: 100%;
