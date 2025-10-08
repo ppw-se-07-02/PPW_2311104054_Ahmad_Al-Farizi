@@ -3,115 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Halaman Administrator</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .admin-container {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 1fr;
-            min-height: 100vh;
-        }
-
-        .admin-header {
-            background-color: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .admin-main {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 1rem;
-            padding: 1rem;
-            flex: 1;
-        }
-
-        .admin-sidebar {
-            background-color: #f9f9f9;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .admin-sidebar ul {
-            list-style-type: none;
-        }
-
-        .admin-sidebar li {
-            margin-bottom: 0.5rem;
-        }
-
-        .admin-sidebar a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            padding: 0.5rem;
-        }
-
-        .admin-sidebar a:hover {
-            background-color: #ddd;
-            border-radius: 4px;
-        }
-
-        .admin-content {
-            background-color: #fff;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .admin-footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .admin-main {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Dashboard Administrator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="admin-container">
         <header class="admin-header">
-            <h1>Header</h1>
+            <div class="logo">
+                <i class="fas fa-tachometer-alt"></i>
+                <h1>Dashboard Administrator</h1>
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="user-avatar">AJ</div>
+                <div class="user-details">
+                    <div class="user-name">Admin Jaya</div>
+                    <div class="user-role">Super Admin</div>
+                </div>
+            </div>
         </header>
         
         <div class="admin-main">
             <nav class="admin-sidebar">
-                <h2>Menu:</h2>
+                <h2><i class="fas fa-bars"></i> Menu Navigasi</h2>
                 <ul>
-                    <li><a href="#">Data User</a></li>
-                    <li><a href="#">Kelola Produk</a></li>
-                    <li><a href="#">Edit Password</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Data User</a></li>
+                    <li><a href="#"><i class="fas fa-box"></i> Kelola Produk</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Analitik</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Pengaturan</a></li>
+                    <li><a href="#"><i class="fas fa-key"></i> Edit Password</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </nav>
             
             <section class="admin-content">
-                <h2>Konten Dinamis</h2>
-                <p>Konten Dinamis.</p>
+                <div class="content-header">
+                    <h2>Dashboard Utama</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Tambah Data
+                    </button>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Pengguna</h3>
+                        <div class="value">1,254</div>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i> 12% dari bulan lalu
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Produk</h3>
+                        <div class="value">586</div>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i> 5% dari bulan lalu
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pendapatan Bulan Ini</h3>
+                        <div class="value">Rp 28,5 Jt</div>
+                        <div class="trend down">
+                            <i class="fas fa-arrow-down"></i> 3% dari bulan lalu
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pesanan Baru</h3>
+                        <div class="value">42</div>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i> 8% dari minggu lalu
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-activity">
+                    <h3><i class="fas fa-history"></i> Aktivitas Terbaru</h3>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Pengguna Baru</h4>
+                                <p>Budi Santoso telah mendaftar</p>
+                            </div>
+                            <div class="activity-time">10 menit lalu</div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Pesanan Baru</h4>
+                                <p>Pesanan #ORD-2847 telah dibuat</p>
+                            </div>
+                            <div class="activity-time">1 jam lalu</div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Produk Diperbarui</h4>
+                                <p>Produk "Smartphone X" telah diperbarui</p>
+                            </div>
+                            <div class="activity-time">2 jam lalu</div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Laporan Dibuat</h4>
+                                <p>Laporan penjualan bulanan telah dibuat</p>
+                            </div>
+                            <div class="activity-time">5 jam lalu</div>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
         
         <footer class="admin-footer">
-            <p>&copy; 2025 Website Untuk Memenuhi Tugas Modul Pertama.</p>
+            <p>&copy; 2025 Dashboard Administrator - Dibuat untuk Memenuhi Tugas Modul Pertama</p>
         </footer>
     </div>
 </body>

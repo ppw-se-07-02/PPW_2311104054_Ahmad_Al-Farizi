@@ -3,200 +3,522 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Halaman Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            display: grid;
-            grid-template-rows: auto auto 1fr auto;
-            grid-template-columns: 1fr;
-            min-height: 100vh;
-        }
-
-        .header {
-            background-color: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .nav-container {
-            background-color: #e9e9e9;
-            padding: 0.5rem 1rem;
-            display: flex;
-            justify-content: flex-end;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .nav a {
-            margin-left: 1rem;
-            text-decoration: none;
-            color: #333;
-            padding: 0.5rem;
-        }
-
-        .nav a:hover {
-            background-color: #ddd;
-            border-radius: 4px;
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap: 1rem;
-            padding: 1rem;
-            flex: 1;
-        }
-
-        .sidebar, .ads {
-            background-color: #f9f9f9;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .content {
-            background-color: #fff;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        /* Layout Halaman Administrator */
-        .admin-container {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 1fr;
-            min-height: 100vh;
-        }
-
-        .admin-header {
-            background-color: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .admin-main {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 1rem;
-            padding: 1rem;
-            flex: 1;
-        }
-
-        .admin-sidebar {
-            background-color: #f9f9f9;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .admin-sidebar ul {
-            list-style-type: none;
-        }
-
-        .admin-sidebar li {
-            margin-bottom: 0.5rem;
-        }
-
-        .admin-sidebar a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            padding: 0.5rem;
-        }
-
-        .admin-sidebar a:hover {
-            background-color: #ddd;
-            border-radius: 4px;
-        }
-
-        .admin-content {
-            background-color: #fff;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-
-        .admin-footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .admin-main {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-container {
-                justify-content: center;
-            }
-            
-            .nav a {
-                margin: 0 0.5rem 0.5rem 0;
-            }
-        }
-    </style>
+    <title>Halaman Profil Pengguna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>Header</h1>
+            <h1>Halaman Profil Pengguna</h1>
+            <p>Selamat datang di platform komunitas kami</p>
         </header>
         
         <div class="nav-container">
             <nav class="nav">
-                <a href="#">Beranda</a>
-                <a href="#">Produk</a>
-                <a href="#">Member</a>
-                <a href="#">Login</a>
+                <a href="#" class="active"><i class="fas fa-home"></i> Beranda</a>
+                <a href="#"><i class="fas fa-user-friends"></i> Teman</a>
+                <a href="#"><i class="fas fa-images"></i> Galeri</a>
+                <a href="#"><i class="fas fa-bell"></i> Notifikasi</a>
+                <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
             </nav>
         </div>
         
         <main class="main-content">
             <aside class="sidebar">
-                <h2>Populer</h2>
-                <p>Populer.</p>
+                <h2><i class="fas fa-user-circle"></i> Profil Saya</h2>
+                <div class="profile-card">
+                    <div class="profile-avatar">AJ</div>
+                    <div class="profile-name">Ahmad Jaya</div>
+                    <div class="profile-title">Software Developer</div>
+                    <p>Bergabung sejak April 2023</p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-value">245</span>
+                            <span class="stat-label">Teman</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">48</span>
+                            <span class="stat-label">Postingan</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">1.2K</span>
+                            <span class="stat-label">Pengikut</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 2rem;"><i class="fas fa-users"></i> Teman Populer</h2>
+                <div class="popular-friends">
+                    <div class="friend-item">
+                        <div class="post-author" style="margin: 1rem 0;">
+                            <div class="post-avatar" style="background-color: #ff6b6b;">RS</div>
+                            <div class="post-info">
+                                <h4>Rina Sari</h4>
+                                <p>UI/UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friend-item">
+                        <div class="post-author" style="margin: 1rem 0;">
+                            <div class="post-avatar" style="background-color: #4ecdc4;">BD</div>
+                            <div class="post-info">
+                                <h4>Budi Darmawan</h4>
+                                <p>Data Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friend-item">
+                        <div class="post-author" style="margin: 1rem 0;">
+                            <div class="post-avatar" style="background-color: #ffd166;">SM</div>
+                            <div class="post-info">
+                                <h4>Sari Melati</h4>
+                                <p>Project Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </aside>
             
             <section class="content">
-                <h2>Konten Dinamis</h2>
-                <p>Konten Dinamis.</p>
+                <div class="content-header">
+                    <h2><i class="fas fa-newspaper"></i> Postingan Terbaru</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Buat Postingan
+                    </button>
+                </div>
+                
+                <div class="posts-container">
+                    <div class="posts">
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">2 jam lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Tips Mengoptimalkan Kode Dart untuk Flutter</h3>
+                                <p>Hari ini saya ingin berbagi beberapa teknik untuk mengoptimalkan kode Dart dalam pengembangan aplikasi Flutter. Dengan menerapkan tips ini, Anda dapat meningkatkan performa aplikasi secara signifikan.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>124</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>28</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">1 hari lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Pengalaman Mengikuti Bootcamp Programming</h3>
+                                <p>Baru saja menyelesaikan bootcamp programming intensif selama 3 bulan. Sangat merekomendasikan bagi yang ingin memperdalam keterampilan coding dalam waktu singkat dengan kurikulum yang terstruktur.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>89</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>15</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">2 hari lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Membangun Aplikasi E-commerce dengan Flutter</h3>
+                                <p>Baru saja merilis aplikasi e-commerce pertama yang dibangun dengan Flutter. Proses pengembangannya sangat menarik dengan banyak tantangan yang harus diatasi, terutama dalam hal integrasi payment gateway.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>156</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">3 hari lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Belajar State Management di Flutter</h3>
+                                <p>Setelah mencoba berbagai state management approach di Flutter, saya menemukan bahwa Provider dan Riverpod adalah solusi yang paling elegan untuk aplikasi dengan kompleksitas menengah. Bagaimana pendapat Anda?</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>98</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>31</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">5 hari lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Mengoptimalkan UI/UX untuk Aplikasi Mobile</h3>
+                                <p>Desain antarmuka yang baik tidak hanya tentang estetika tetapi juga tentang pengalaman pengguna. Berbagi beberapa prinsip dasar yang saya terapkan dalam mendesain aplikasi mobile yang user-friendly.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>134</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>27</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">1 minggu lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Memulai Karir sebagai Flutter Developer</h3>
+                                <p>Bagi yang tertarik memulai karir sebagai Flutter developer, saya ingin berbagi roadmap dan sumber daya belajar yang menurut saya paling efektif berdasarkan pengalaman pribadi.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>210</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>56</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- POSTINGAN BARU TAMBAHAN -->
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">1 minggu lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Implementasi Clean Architecture di Flutter</h3>
+                                <p>Baru saja menyelesaikan proyek dengan menerapkan Clean Architecture di Flutter. Hasilnya kode menjadi lebih terstruktur, mudah di-test, dan maintainable. Sangat recommended untuk proyek skala menengah hingga besar.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>187</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>34</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">2 minggu lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Penggunaan GraphQL dalam Aplikasi Flutter</h3>
+                                <p>Mengeksplorasi penggunaan GraphQL sebagai pengganti REST API dalam proyek Flutter terbaru. Performa yang lebih baik dan fetching data yang lebih efisien menjadi keunggulan utamanya.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>142</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>29</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">2 minggu lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Tips Debugging yang Efektif di Flutter</h3>
+                                <p>Berbagi beberapa teknik debugging yang saya temukan sangat membantu selama development dengan Flutter. Dari menggunakan breakpoint hingga logging yang tepat.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>115</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>18</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">3 minggu lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Membangun Custom Widget di Flutter</h3>
+                                <p>Membuat custom widget yang reusable dapat menghemat banyak waktu development. Berbagi contoh custom widget yang sering saya gunakan dalam berbagai proyek.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>176</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>22</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">1 bulan lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Pengenalan kepada Dart Null Safety</h3>
+                                <p>Null Safety di Dart telah menjadi standar. Mari bahas bagaimana mengimplementasikannya dengan benar dan manfaat yang didapat dalam pengembangan aplikasi yang lebih robust.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>203</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>41</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <div class="post-avatar">AJ</div>
+                                    <div class="post-info">
+                                        <h4>Ahmad Jaya</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                                <div class="post-time">1 bulan lalu</div>
+                            </div>
+                            <div class="post-content">
+                                <h3>Optimasi Performance Aplikasi Flutter</h3>
+                                <p>Beberapa teknik advanced untuk mengoptimalkan performance aplikasi Flutter, termasuk lazy loading, image optimization, dan mengurangi rebuild widget yang tidak diperlukan.</p>
+                                <div class="post-actions">
+                                    <div class="post-action">
+                                        <i class="fas fa-heart"></i>
+                                        <span>165</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-comment"></i>
+                                        <span>33</span>
+                                    </div>
+                                    <div class="post-action">
+                                        <i class="fas fa-share"></i>
+                                        <span>Bagikan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             
             <aside class="ads">
-                <h2>Iklan</h2>
-                <p>Iklan dan Promosi.</p>
+                <h2><i class="fas fa-ad"></i> Iklan & Promosi</h2>
+                <div class="ad-item">
+                    <h3>Kursus Online Flutter</h3>
+                    <p>Belajar membuat aplikasi mobile dengan Flutter dan Dart. Diskon 30% untuk pendaftaran bulan ini.</p>
+                    <button class="ad-btn">Daftar Sekarang</button>
+                </div>
+                <div class="ad-item secondary">
+                    <h3>Konferensi Developer 2025</h3>
+                    <p>Bergabunglah dengan developer terkemuka dalam acara tahunan kami. Tiket terbatas!</p>
+                    <button class="ad-btn">Info Lebih Lanjut</button>
+                </div>
+                
+                <h2 style="margin-top: 2rem;"><i class="fas fa-calendar-alt"></i> Acara Mendatang</h2>
+                <div class="event-item">
+                    <div class="post-author" style="margin: 1rem 0;">
+                        <div class="post-avatar" style="background-color: #6a0572; font-size: 1.2rem;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="post-info">
+                            <h4>Meetup Developer Lokal</h4>
+                            <p>15 Juni 2025 • 19:00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="post-author" style="margin: 1rem 0;">
+                        <div class="post-avatar" style="background-color: #06d6a0; font-size: 1.2rem;">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="post-info">
+                            <h4>Webinar: Cloud Computing</h4>
+                            <p>22 Juni 2025 • 14:00 WIB</p>
+                        </div>
+                    </div>
+                </div>
             </aside>
         </main>
         
         <footer class="footer">
-            <p>&copy; 2025 Website Untuk Memenuhi Tugas Modul Pertama.</p>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+                <p>&copy; 2025 Platform Komunitas - Dibuat untuk Memenuhi Tugas Modul Pertama</p>
+                <p>Hubungi kami: info@contoh.com | +62 812 3456 7890</p>
+            </div>
         </footer>
     </div>
 </body>
