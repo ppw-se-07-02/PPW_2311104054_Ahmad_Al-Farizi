@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Praktikum Modul 5 - Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+
+    <style>
+        .demo-container {
+            background-color: #f0f0f0;
+            border: 2px solid #333;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Memasang Bootstrap dan Mencoba Container -->
+    <h1 class="text-center my-4">Percobaan Container</h1>
+    <div class="container demo-container">
+        <h2>Ini adalah .container</h2>
+        <p>Container ini memiliki lebar maksimum yang tetap di setiap ukuran layar (breakpoint) dan akan berada di tengah halaman.</p>
+    </div>
+    <div class="container-fluid demo-container">
+        <h2>Ini adalah .container-fluid</h2>
+        <p>Container ini akan selalu mengambil lebar 100% dari viewport (layar), tidak peduli ukurannya.</p>
+    </div>
+
+    <!-- Menerapkan Sistem Grid -->
+    <hr class="my-5">
+    <h1 class="text-center my-4">Percobaan Grid System</h1>
+    <div class="container">
+        <h3>Baris 1: Dua kolom (8 dan 4)</h3>
+        <div class="row">
+            <div class="col-12 col-md-8 bg-primary text-white p-3">.col-12 .col-md-8</div>
+            <div class="col-12 col-md-4 bg-secondary text-white p-3">.col-12 .col-md-4</div>
+        </div>
+        <h3 class="mt-4">Baris 2: Tiga kolom (4, 4, 4)</h3>
+        <div class="row">
+            <div class="col-6 col-md-4 bg-success text-white p-3">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4 bg-danger text-white p-3">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4 bg-warning text-dark p-3">.col-6 .col-md-4</div>
+        </div>
+        <h3 class="mt-4">Baris 3: Dua kolom sama besar (6 dan 6)</h3>
+        <div class="row">
+            <div class="col-6 bg-info text-white p-3">.col-6</div>
+            <div class="col-6 bg-dark text-white p-3">.col-6</div>
+        </div>
+    </div>
+
+    <!-- Percobaan Text Style -->
+    <hr class="my-5">
+    <h1 class="text-center my-4">Percobaan Text Style</h1>
+    <div class="container">
+        <p class="text-start">Teks ini rata kiri (text-start).</p>
+        <p class="text-center">Teks ini rata tengah (text-center).</p>
+        <p class="text-end">Teks ini rata kanan (text-end).</p>
+        <p class="text-lowercase">Teks ini dibuat huruf kecil semua (text-lowercase).</p>
+        <p class="text-uppercase">Teks ini dibuat huruf besar semua (text-uppercase).</p>
+        <p class="text-capitalize">Teks ini dibuat huruf besar di awal kata (text-capitalize).</p>
+        <p class="fw-bold">Teks ini tebal (fw-bold).</p>
+        <p class="fst-italic">Teks ini miring (fst-italic).</p>
+        <p class="h1">Ini paragraf yang berstyle seperti H1.</p>
+    </div>
+
+    <!-- Percobaan Table, Image & Button -->
+    <hr class="my-5">
+    <h1 class="text-center my-4">Percobaan Table, Image & Button</h1>
+    <div class="container">
+        <h2>Table</h2>
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col">Asal Kota</th>
+                    <th scope="col">Umur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Budi Rojadi</td>
+                    <td>Semarang</td>
+                    <td>35 th</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Yulia Santi</td>
+                    <td>Bekasi</td>
+                    <td>32</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="mt-5">Image</h2>
+        <p>Gambar Responsif (img-fluid):</p>
+        <img src="https://via.placeholder.com/800x400" class="img-fluid" alt="Responsive image">
+    
+        <p class="mt-3">Gambar Thumbnail (img-thumbnail):</p>
+        <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="Thumbnail image">
+
+        <h2 class="mt-5">Button</h2>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
+        <button type="button" class="btn btn-success w-100">Success Full Width</button>
+        <button type="button" class="btn btn-info btn-sm">Info Small</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+    <!-- Percobaan Form -->
+    <hr class="my-5">
+    <h1 class="text-center my-4">Percobaan Form</h1>
+    <div class="container">
+        <h3>Horizontal Form</h3>
+        <form>
+            <div class="row mb-3">
+                <label for="uname" class="col-sm-2 col-form-label">Username:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="pwd" class="col-sm-2 col-form-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+</body>
+</html>
