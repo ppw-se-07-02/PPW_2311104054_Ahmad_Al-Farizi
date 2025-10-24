@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // document.write("Hello, teman!");
+
+                // $("body").append("<p>Hello, teman!</p>");
+
+                // var hobi = ["Listning", "Ngoding", "Singing"];
+                // $("#hasil").text("Hobi farvorit: " + hobi[1]);
+                
+                // var a = 10;
+                // var b = 5;
+                // var hasil = a + b;
+                // $("#output").text("Hasil penjumlahan: " + hasil);
+
+                // var nilai = 75;
+
+                // if (nilai >= 70) {
+                //     $("#output").text("Selamat, Anda Lulus!");
+                //     $("#output").css("color", "green");
+                // } else {
+                //     $("#output").text("Maaf, Anda Tidak Lulus.");
+                //     $("#output").css("color", "red");
+                // }
+
+                // $("#hide").click(function() {
+                //     $("p").hide();
+                // });
+                // $("#show").click(function() {
+                //     $("p").show();
+                // });
+
+                $("button").click(function() {
+                    $("div").animate({ height: 'toggle'
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!-- <div id="hasil"></div> -->
+
+        <!-- <div id="output"></div> -->
+
+        <!-- <p>If you click on the "Hide" button, I will disappear.</p>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button> -->
+
+        <p>Click the button multiple times to toggle the animation.</p>
+        <button>Start Animation</button>
+        <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+        <div style="background:#98bf21; height:100px; width:100px; position:absolute;">
+        </div>
+    </body>
+</html>
