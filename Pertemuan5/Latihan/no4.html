@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 - Efek Fade jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #kotak {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#tombol-sembunyi").click(function() {
+                $("#kotak").fadeOut("slow");
+            });
+
+            $("#tombol-tampil").click(function() {
+                $("#kotak").fadeIn("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Efek Fade In dan Fade Out</h2>
+    <button id="tombol-sembunyi">Sembunyikan</button>
+    <button id="tombol-tampil">Tampilkan</button>
+    <br><br>
+    <div id="kotak"></div>
+</body>
+</html>

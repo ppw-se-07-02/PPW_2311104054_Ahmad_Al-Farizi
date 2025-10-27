@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 - Event Klik jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#tombol-ubah").click(function() {
+                $("#paragraf")
+                    .text("Tombol sudah diklik!") 
+                    .css("color", "red");        
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Event Klik Tombol</h2>
+    <button id="tombol-ubah">Klik Saya</button>
+    <p id="paragraf">Ini adalah teks awal.</p>
+</body>
+</html>

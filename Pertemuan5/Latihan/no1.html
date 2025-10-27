@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 - Kalkulator Harga dengan Tombol</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function hitungTotal() {
+                const hargaInputs = document.querySelectorAll('.harga-satuan');
+                const jumlahInputs = document.querySelectorAll('.jumlah');
+                
+                let totalKeseluruhan = 0;
+
+                for (let i = 0; i < hargaInputs.length; i++) {
+                    const harga = parseInt(hargaInputs[i].value) || 0;
+                    const jumlah = parseInt(jumlahInputs[i].value) || 0;
+
+                    totalKeseluruhan += harga * jumlah;
+                }
+                const totalSpan = document.getElementById('total-harga');
+                totalSpan.innerText = "Rp " + totalKeseluruhan.toLocaleString('id-ID');
+            }
+            hitungTotal();
+            const tombolHitung = document.getElementById('hitung-total-btn');
+            tombolHitung.addEventListener('click', hitungTotal);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Pembelian Barang</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Barang</th>
+                    <th>Harga Satuan</th>
+                    <th>Jumlah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Susu UHT</td>
+                    <td><input type="number" class="harga-satuan" value="42000"></td>
+                    <td><input type="number" class="jumlah" value="10"></td>
+                </tr>
+                <tr>
+                    <td>Roti Tawar</td>
+                    <td><input type="number" class="harga-satuan" value="30000"></td>
+                    <td><input type="number" class="jumlah" value="3"></td>
+                </tr>
+                <tr>
+                    <td>Mie Instan</td>
+                    <td><input type="number" class="harga-satuan" value="20000"></td>
+                    <td><input type="number" class="jumlah" value="5"></td>
+                </tr>
+                <tr>
+                    <td>Sosis</td>
+                    <td><input type="number" class="harga-satuan" value="51000"></td>
+                    <td><input type="number" class="jumlah" value="7"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="hitung-total-btn">Hitung Total Harga</button>
+        <div class="total-section">
+            Total Harga Pembelian: <span id="total-harga">Rp 0</span>
+        </div>
+    </div>
+</body>
+</html>
