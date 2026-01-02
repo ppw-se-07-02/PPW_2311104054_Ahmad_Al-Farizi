@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi Web Pengelolaan Data Mahasiswa - RESTful API dengan Node.js, Express.js, dan MySQL">
+    <title>Pengelolaan Data Mahasiswa | Ahmad Al-Farizi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎓</span>
+                    <div class="logo-text">
+                        <h1>Pengelolaan Data Mahasiswa</h1>
+                        <p>RESTful API dengan Node.js, Express.js & MySQL</p>
+                    </div>
+                </div>
+                <div class="header-info">
+                    <span class="badge">Latihan Pertemuan 13</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="form-section">
+                <div class="card form-card">
+                    <div class="card-header">
+                        <h2 id="formTitle">
+                            <span class="icon">➕</span>
+                            Tambah Mahasiswa Baru
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="mahasiswaForm">
+                            <input type="hidden" id="mahasiswaId">
+
+                            <div class="form-group">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nim">NIM</label>
+                                <input type="text" id="nim" name="nim" placeholder="Contoh: 2311104054" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="jurusan">Jurusan / Program Studi</label>
+                                <input type="text" id="jurusan" name="jurusan" placeholder="Contoh: Teknik Informatika"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Contoh: mahasiswa@email.com"
+                                    required>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary" id="submitBtn">
+                                    <span class="btn-icon">💾</span>
+                                    Simpan Data
+                                </button>
+                                <button type="button" class="btn btn-secondary" id="cancelBtn" style="display: none;">
+                                    <span class="btn-icon">❌</span>
+                                    Batal
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h2>
+                            <span class="icon">📋</span>
+                            Daftar Mahasiswa
+                        </h2>
+                        <button class="btn btn-refresh" id="refreshBtn">
+                            <span class="btn-icon">🔄</span>
+                            Refresh
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-wrapper">
+                            <table id="mahasiswaTable">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>NIM</th>
+                                        <th>Jurusan</th>
+                                        <th>Email</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="empty-state" id="emptyState" style="display: none;">
+                            <span class="empty-icon">📭</span>
+                            <p>Belum ada data mahasiswa</p>
+                            <span class="empty-hint">Tambahkan data mahasiswa baru menggunakan form di atas</span>
+                        </div>
+                        <div class="loading-state" id="loadingState" style="display: none;">
+                            <div class="spinner"></div>
+                            <p>Memuat data...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Ahmad Al-Farizi | NIM: 2311104054 | Telkom University Purwokerto</p>
+        </footer>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Konfirmasi</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Apakah Anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalCancel">Batal</button>
+                <button class="btn btn-danger" id="modalConfirm">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "latihan-mahasiswa-api",
+    "version": "1.0.0",
+    "description": "Aplikasi Web Pengelolaan Data Mahasiswa dengan RESTful API",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ahmad Al-Farizi",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^5.2.1",
+        "mysql": "^2.18.1"
+    }
+}
